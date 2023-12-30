@@ -1,0 +1,12 @@
+.main{
+    height: 426px;
+    left: 286px;
+    top: 183px;
+    width: 1235px;
+    position: absolute;
+    background-color: rgb(108, 42, 165);
+}
+
+.main h1{
+    text-align: center;
+}

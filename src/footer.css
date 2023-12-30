@@ -1,0 +1,15 @@
+.footer{
+    height: 134px;
+    left:18px;
+    position: relative;
+    top: 450px;
+    width:98%;
+    background-color: #144709;
+    /* display: flex; */
+    
+}
+.footer h1{
+    align-items: center;
+    justify-content: center;  
+    text-align: center;
+}
