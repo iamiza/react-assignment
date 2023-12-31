@@ -8,8 +8,8 @@ const ToDo = () => {
     const del = (array,i) =>{
         array.splice(i,1);
         setLists([...lists])
-     }
-
+    }
+    
     return (
         <>
             <h1>Add ToDo</h1>
@@ -19,7 +19,13 @@ const ToDo = () => {
                 onChange={e => setName(e.target.value)}>
             </input>
             <button onClick={() => {
-                setLists([...lists, { name: name }])
+                if (name !== ""){
+                setLists([...lists, { name: name }]);
+                setName("");}
+                else
+                {
+                    alert("Cannot add an empty ToDo item")
+                }
             }
             }>Add</button>
             
@@ -28,7 +34,7 @@ const ToDo = () => {
                     
 
                     <div>
-                    <input type="checkbox" ></input>   
+                    {/* <input type="checkbox" ></input>    */}
                     <span>{list.name}</span>
                 
                 
