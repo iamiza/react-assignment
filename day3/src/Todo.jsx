@@ -4,10 +4,16 @@ import { useState } from 'react';
 const ToDo = () => {
     const [name, setName] = useState('');
     const [lists, setLists] = useState([]);
+    const [check, setCheck] = useState(false)
 
     const del = (array,i) =>{
         array.splice(i,1);
         setLists([...lists])
+    }
+
+    const handelCheckBox = (e) => {
+        const value = e.target.checked;
+        setCheck(value);
     }
     
     return (
@@ -34,8 +40,8 @@ const ToDo = () => {
                     
 
                     <div>
-                    {/* <input type="checkbox" ></input>    */}
-                    <span>{list.name}</span>
+                    <input type="checkbox" onChange={(e) => handelCheckBox(e)}></input>
+                    <span style={{textDecoration : check ?"line-through":''}}>{list.name}</span>
                 
                 
                     <button onClick={()=> del(lists,index)} >Delete</button></div>
